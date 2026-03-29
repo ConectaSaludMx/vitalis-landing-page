@@ -1,0 +1,74 @@
+---
+---
+<section id="contacto" class="bg-purple-bg py-24 px-6">
+  <div class="max-w-3xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="font-serif text-4xl text-purple-dk mb-4">Contacta con nosotros</h2>
+      <p class="font-sans text-lg text-ink/70">
+        Estamos aquí para resolver tus dudas y explorar cómo nuestra IA puede potenciar tu práctica clínica.
+      </p>
+    </div>
+
+    <form name="contact" method="POST" data-netlify="true" class="space-y-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label for="name" class="block text-sm font-medium text-ink mb-2">Nombre</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            required
+            placeholder="Tu nombre completo"
+            class="w-full px-4 py-3 rounded-xl border border-purple-lt bg-white focus:ring-2 focus:ring-purple focus:border-transparent outline-none transition-all"
+          />
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-ink mb-2">Email profesional</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            placeholder="dr.nombre@hospital.com"
+            class="w-full px-4 py-3 rounded-xl border border-purple-lt bg-white focus:ring-2 focus:ring-purple focus:border-transparent outline-none transition-all"
+          />
+        </div>
+      </div>
+
+      <div>
+        <label for="interest" class="block text-sm font-medium text-ink mb-2">Interés</label>
+        <select
+          name="interest"
+          id="interest"
+          required
+          class="w-full px-4 py-3 rounded-xl border border-purple-lt bg-white focus:ring-2 focus:ring-purple focus:border-transparent outline-none transition-all appearance-none cursor-pointer"
+        >
+          <option value="" disabled selected>Selecciona una opción</option>
+          <option value="cylene">Cylene (Asistente)</option>
+          <option value="lumina">Lumina (Diagnóstico)</option>
+          <option value="alianzas">Alianzas</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="message" class="block text-sm font-medium text-ink mb-2">Mensaje (opcional)</label>
+        <textarea
+          name="message"
+          id="message"
+          rows="4"
+          placeholder="¿En qué podemos ayudarte?"
+          class="w-full px-4 py-3 rounded-xl border border-purple-lt bg-white focus:ring-2 focus:ring-purple focus:border-transparent outline-none transition-all resize-none"
+        ></textarea>
+      </div>
+
+      <div class="text-center pt-4">
+        <button
+          type="submit"
+          class="bg-purple text-paper px-10 py-4 rounded-full font-semibold hover:bg-purple-dk transition-all shadow-md hover:shadow-lg inline-flex items-center"
+        >
+          Enviar mensaje
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
