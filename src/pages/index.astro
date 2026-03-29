@@ -1,25 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
 
 // Welcome to Astro! Gratuitous fonts and colors are applied via the Layout.
 ---
 
 <Layout title="Vitalis Cognita | Conecta Salud del Norte">
-	<main class="min-h-screen flex flex-col items-center justify-center p-8 text-center">
-		<h1 class="font-serif text-5xl md:text-7xl text-purple mb-6">Vitalis Cognita</h1>
-		<p class="text-xl md:text-2xl text-muted max-w-2xl font-sans">
-			Razón Social: <span class="text-purple-dk font-bold">Conecta Salud del Norte</span>
-		</p>
-		<div class="mt-12 flex gap-4">
-			<a href="#about" class="bg-purple text-paper px-8 py-3 rounded-full font-bold hover:bg-purple-dk transition-colors">
-				Saber más
-			</a>
-			<a href="#" class="border-2 border-purple text-purple px-8 py-3 rounded-full font-bold hover:bg-purple-bg transition-colors">
-				Contacto
-			</a>
-		</div>
-	</main>
-	<section id="about" class="h-screen bg-purple-bg flex items-center justify-center">
+	<Hero />
+	<section id="about" class="h-screen bg-paper flex items-center justify-center">
 		<h2 class="font-serif text-4xl text-purple-dk">Nuestra Visión</h2>
 	</section>
 </Layout>
