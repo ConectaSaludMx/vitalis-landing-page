@@ -1,0 +1,42 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-purple-dk text-paper py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Logo/Brand Section -->
+      <div class="space-y-4">
+        <h2 class="text-2xl font-serif font-bold text-purple-lt">Vitalis Cognita</h2>
+        <p class="text-sm text-purple-lt/80 leading-relaxed">Innovando en soluciones para la salud y el bienestar.</p>
+      </div>
+
+      <!-- Legal Links -->
+      <div class="lg:col-span-2 grid grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="space-y-3">
+          <h3 class="text-sm font-semibold uppercase tracking-wider text-purple-lt/60">Legal</h3>
+          <ul class="space-y-2">
+            <li><a href="/aviso-de-privacidad" class="text-sm hover:text-purple-lt transition-colors">Aviso de Privacidad</a></li>
+            <li><a href="/aviso-legal" class="text-sm hover:text-purple-lt transition-colors">Aviso Legal</a></li>
+            <li><a href="/politica-de-cookies" class="text-sm hover:text-purple-lt transition-colors">Política de Cookies</a></li>
+          </ul>
+        </div>
+        <div class="space-y-3">
+          <h3 class="text-sm font-semibold uppercase tracking-wider text-purple-lt/60">Términos</h3>
+          <ul class="space-y-2">
+            <li><a href="/terminos-cylene" class="text-sm hover:text-purple-lt transition-colors">Términos Cylene</a></li>
+            <li><a href="/terminos-lumina" class="text-sm hover:text-purple-lt transition-colors">Términos Lumina</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Copyright -->
+    <div class="mt-12 pt-8 border-t border-purple-lt/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-purple-lt/60">
+      <p>&copy; {currentYear} Conecta Salud del Norte. Todos los derechos reservados.</p>
+      <div class="flex space-x-6">
+        <span>Vitalis Cognita &reg;</span>
+      </div>
+    </div>
+  </div>
+</footer>
