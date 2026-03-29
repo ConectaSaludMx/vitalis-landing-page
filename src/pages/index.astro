@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import Products from '../components/Products.astro';
+import Trust from '../components/Trust.astro';
 
 // Welcome to Astro! Gratuitous fonts and colors are applied via the Layout.
 ---
@@ -9,7 +10,11 @@ import Products from '../components/Products.astro';
 <Layout title="Vitalis Cognita | Conecta Salud del Norte">
 	<Hero />
 	<Products />
-	<section id="about" class="h-screen bg-paper flex items-center justify-center">
-		<h2 class="font-serif text-4xl text-purple-dk">Nuestra Visión</h2>
+	<section id="about" class="bg-paper py-24 px-6 flex flex-col items-center justify-center">
+		<h2 class="font-serif text-4xl text-purple-dk mb-6 text-center">Nuestra Visión</h2>
+		<p class="font-sans text-lg text-ink/80 max-w-3xl text-center leading-relaxed">
+			Buscamos transformar el ecosistema de salud digital mediante el uso responsable y ético de la inteligencia artificial, facilitando procesos clínicos más precisos y humanos.
+		</p>
 	</section>
+	<Trust />
 </Layout>
