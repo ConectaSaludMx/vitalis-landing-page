@@ -17,14 +17,58 @@
         </div>
       </div>
 
-      <!-- Mobile menu button (placeholder) -->
+      <!-- Mobile menu button -->
       <div class="md:hidden flex items-center">
-        <button type="button" class="text-ink hover:text-purple">
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <button id="mobile-menu-button" type="button" class="text-ink hover:text-purple transition-colors p-2" aria-expanded="false" aria-label="Abrir menú">
+          <svg id="menu-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+          <svg id="close-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
       </div>
     </div>
   </div>
+
+  <!-- Mobile menu dropdown -->
+  <div id="mobile-menu" class="hidden md:hidden bg-paper border-b border-purple-lt/10">
+    <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col items-center">
+      <a href="#mision" class="w-full text-center py-3 text-ink hover:text-purple transition-colors font-medium">Misión</a>
+      <a href="#productos" class="w-full text-center py-3 text-ink hover:text-purple transition-colors font-medium">Productos</a>
+      <a href="#contacto" class="w-full text-center py-3 text-ink hover:text-purple transition-colors font-medium">Contacto</a>
+      <a href="#acceder" class="w-full text-center mt-2 bg-purple text-paper px-6 py-3 rounded-full font-semibold hover:bg-purple-dk transition-all">Acceder</a>
+    </div>
+  </div>
 </nav>
+
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+  const closeIcon = document.getElementById('close-icon');
+
+  if (mobileMenuButton && mobileMenu && menuIcon && closeIcon) {
+    mobileMenuButton.addEventListener('click', () => {
+      const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+      const newState = !isExpanded;
+      mobileMenuButton.setAttribute('aria-expanded', String(newState));
+      mobileMenuButton.setAttribute('aria-label', newState ? 'Cerrar menú' : 'Abrir menú');
+      mobileMenu.classList.toggle('hidden');
+      menuIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    });
+
+    // Close menu when clicking a link
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuButton.setAttribute('aria-label', 'Abrir menú');
+      });
+    });
+  }
+</script>
